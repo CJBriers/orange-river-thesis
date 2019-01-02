@@ -108,49 +108,9 @@ def produce_diff(down_station, input_list, include_time, sample_size, network_ty
 
 if __name__ == '__main__':
     start_time = time.time()
-    # input_list is a tuple (input_name, interpolation_method, shift_offset, trim_nan)
-
-    # sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
-    # run_permutations('D8H003', ['D3H012', 'C9H009', 'C5H014'], ['C9E005', 'D3E003', 'D7E001', 'D8E005'], [1], [2048], [14], [1000.0], 'nn_cat', [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 350, 400, 450, 500, 600, 700, 800, 900, 1000, 1200, 1400, 1600, 1800, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 9999999])
-    # run('C9R003', ['C5H014', 'C9H024'], [], 1, 192, 192, 'rnn_gru', [])
-    # run('D7H012', ['D3H012', 'C5H014', 'C9H024'], [], 1, 192, 192, 'rnn_gru', [])
-    # run('D3H008', ['D3H012'], [], 1, 192, 192, 'rnn_gru', [])
-    # run('D3H008', ['D3H012'], [], 1, 96, 192, 'rnn_cnn', [])
-    # run('D8H003', ['D3H012', 'C9H009', 'C5H014'], [], 1, 512, 18, 1000.0, 'nn', [])
-    # run('D3H008', ['D3H012'], [], 1, 2048, 192, 'nn', [])
-    # run_permutations('D3H008', ['D3H012'], [], [1], [8192], [192], 'nn', [])
-    # run_permutations('D3H008', ['D3H012'], [], [1], [2048], [192], 'nn', [], False)
-    # run_permutations('D3H008', ['D3H012'], ['D3E003', 'C9E005EVAP', 'C9E005RAIN'], [14], [0], [192], 'cnn', [], True)
-    # run_permutations('D3H008', ['D3H012'], ['D3E003', 'C9E005EVAP', 'C9E005RAIN'], [1], [4, 16, 32, 96, 192, 384, 1024], [192], 'rnn_gru', [], True)
-    # run_permutations('D3H008', ['D3H012'], [], [1], [288], [192], 'rnn_gru', [], False)
-    # run_permutations('D3H008', ['D3H012'], [], [1], [1, 2, 3, 4, 16, 32], [192], 'rnn_gru', [], False)
-    # run_permutations('D3H008', ['D3H012'], [], [1], [3], [192], 'rnn_gru', [], True)
     
-    # run_permutations('D3H008', [('D3H012', 'linear', 0, True)], True, [96], 'cnn', [10], [2048])
-    # produce_diff('D3H008', [('D3H012', 'linear', 0, True)], False, 96, 'cnn', 10, 2048)
-    # run_permutations('D3H008', [('D3H012', 'linear', 0, True), ('D3H008-real-cnn', 'linear', 96, True), ('D3H008-pred-cnn', 'linear', 96, True)], False, [96], 'cnn', [10], [2048])
-    # run_permutations('D3H008', [('D3H012', 'linear', 0, True), ('D3H008-diff-cnn', 'linear', 84, True)], False, [84], 'multi_cnn', [10], [2048])
-
-    # run_permutations('D7H012', [('D3H008', 'linear', 0, True), ('C9R003', 'linear', 0, True)], False, [48], 'multi_cnn', [10], [2048])
-    # run_permutations('D7H012', [('D3H012', 'linear', 0, True), ('C9H024', 'linear', 0, True), ('C5H014', 'linear', 0, True)], False, [96], 'multi_cnn', [10], [2048])
-
-    # run_permutations('D7H002', [('D7H012', 'linear', 0, True)], False, [96], 'cnn', [10], [2048])
-    # run_permutations('D7H008', [('D7H002', 'linear', 0, True)], False, [96], 'cnn', [10], [2048])
-    # run_permutations('D7H005', [('D7H008', 'linear', 0, True)], False, [96], 'cnn', [10], [2048])
-    # run_permutations('D7H014', [('D7H005', 'linear', 0, True)], False, [96], 'cnn', [10], [2048])
-    # run_permutations('D8H004', [('D7H014', 'linear', 0, True)], False, [96], 'cnn', [10], [2048])
-    # run_permutations('D8H008', [('D8H004', 'linear', 0, True)], False, [96], 'cnn', [10], [2048])
-    # run_permutations('D8H003', [('D8H008', 'linear', 0, True)], False, [96], 'cnn', [10], [2048])
-    # run_permutations('D8H009', [('D8H003', 'linear', 0, True)], False, [96], 'cnn', [10], [2048])
-    
-    # run_prob('D3H008', [('D3H012', 'linear', 0, True)], False, 96, 'bnn', 10, 2048)
-    # tf.set_random_seed(1111)
-    # run_permutations('D3H008', [('D3H012', 'linear', 0, True)], False, [96], 'bnn', [10], [2048])
-
-
-    # thesis runs
-
-    # 96 time steps input
+    # small test run
+    run_permutations('D3H008', [('D3H012', 'linear', 0, True)], False, [96], 'nn', [1], [256], 10)
 
     # 1 layer fcnn
     # run_permutations('D3H008', [('D3H012', 'linear', 0, True)], False, [96], 'nn', [1], [256], 300)

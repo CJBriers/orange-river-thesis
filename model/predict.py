@@ -152,15 +152,7 @@ def run_sklearn(down_station, input_list, include_time, sample_size, network_typ
     plot_prediction(y_pred, result_dir, y_test, train_y_max, train_y_min) # uncomment for test
 
 if __name__ == '__main__':
-    # run('C9R003', ['C5H014', 'C9H024'], [], 1, 1, 192, 1000.0, 'rnn_lstm', [])
-    # run('D3H008', ['D3H012'], [], 1, 96, 192, 'rnn_gru', [])
-    # run_permutations('D3H008', [('D3H012', 'linear', 0, True), ('D3H008-real-cnn', 'linear', 96, True), ('D3H008-pred-cnn', 'linear', 96, True)], False, [96], 'multi_cnn', [10], [2048])
-    # run_permutations('D3H008', [('D3H012', 'linear', 0, True), ('D3H008-real-cnn', 'linear', 96, True), ('D3H008-pred-cnn', 'linear', 96, True)], False, [96], 'cnn', [10], [2048])
-    # run_permutations('D3H008', ['D3H012'], [], [10], [2048], [96], 'multi_cnn', [], False, True)
-    # run('D3H008', [('D3H012', 'linear', 0, True), ('D3H008-real-cnn', 'linear', 96, True), ('D3H008-pred-cnn', 'linear', 96, True)], False, 96, 'cnn', 10, 2048)
-    # run('D8H003', ['D3H012', 'C9R003'], [], 10, 2048, 384, 'multi_cnn', [], True)
     
-    # thesis
     # run_permutations('D3H008', [('D3H012', 'linear', 0, True)], False, [96], 'nn', [1], [32, 64, 128, 256, 512, 1024, 2048, 4096])
     # run_permutations('D3H008', [('D3H012', 'linear', 0, True)], False, [96], 'nn', [2], [16, 32, 64, 128, 256, 512])
     # run_permutations('D3H008', [('D3H012', 'linear', 0, True)], False, [96], 'nn', [3], [16, 32, 64, 128])

@@ -150,51 +150,9 @@ def run_sgdreg(down_station, input_list, include_time, sample_size, network_type
 if __name__ == '__main__':
     start_time = time.time()
     
-    # input_list is a tuple (input_name, interpolation_method, shift_offset, trim_nan)
-
-    # run_svr_permutations('D3H008', [('D3H012', 'linear', 0, True)], False, [96], 'svr', [1.0], [0.0001])
-    # produce_diff('D3H008', [('D3H012', 'linear', 0, True)], False, 96, 'svr', 1.0, 0.0001)
-    # run_svr_permutations('D3H008', [('D3H012', 'linear', 0, True), ('D3H008-real-svr', 'linear', 96, True), ('D3H008-pred-svr', 'linear', 96, True)], False, [96], 'svr', [1.0], [0.001])
-
-    # run_sgdreg_permutations('D3H008', ['D3H012'], [], [0.01], [0.005], [192], 'sgdreg', [], True)
-    # run_svr_permutations('D3H008', ['D3H012'], [], [1.0], [0.0005], [96], 'svr', [], True, False)
-    # produce_diff('D3H008', ['D3H012'], [], 1.0, 0.0005, 96, 'svr', [], True)
-
-    # run_svr_permutations('D7H012', [('D3H012', 'linear', 0, True), ('C9H024', 'linear', 0, True), ('C5H014', 'linear', 0, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D7H008', [('D7H002', 'linear', 0, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D7H005', [('D7H008', 'linear', 0, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D7H014', [('D7H005', 'linear', 0, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D7H002', [('D7H012', 'linear', 0, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D8H004', [('D7H014', 'linear', 0, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D8H008', [('D8H004', 'linear', 0, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D8H003', [('D8H008', 'linear', 0, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D8H009', [('D8H003', 'linear', 0, True)], False, [96], 'svr', [1.0], [0.001])
-
-    # produce_diff('D7H012', [('D3H012', 'linear', 0, True), ('C9H024', 'linear', 0, True), ('C5H014', 'linear', 0, True)], False, 96, 'svr', 1.0, 0.001)
-    # produce_diff('D7H008', [('D7H002', 'linear', 0, True)], False, 96, 'svr', 1.0, 0.001)
-    # produce_diff('D7H005', [('D7H008', 'linear', 0, True)], False, 96, 'svr', 1.0, 0.001)
-    # produce_diff('D7H014', [('D7H005', 'linear', 0, True)], False, 96, 'svr', 1.0, 0.001)
-    # produce_diff('D7H002', [('D7H012', 'linear', 0, True)], False, 96, 'svr', 1.0, 0.001)
-    # produce_diff('D8H004', [('D7H014', 'linear', 0, True)], False, 96, 'svr', 1.0, 0.001)
-    # produce_diff('D8H008', [('D8H004', 'linear', 0, True)], False, 96, 'svr', 1.0, 0.001)
-    # produce_diff('D8H003', [('D8H008', 'linear', 0, True)], False, 96, 'svr', 1.0, 0.001)
-    # produce_diff('D8H009', [('D8H003', 'linear', 0, True)], False, 96, 'svr', 1.0, 0.001)
-
-    # run_svr_permutations('D7H012', [('D3H012', 'linear', 0, True), ('C9H024', 'linear', 0, True), ('C5H014', 'linear', 0, True), ('D7H012-diff-svr', 'linear', 96, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D7H008', [('D7H002', 'linear', 0, True), ('D7H008-diff-svr', 'linear', 96, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D7H005', [('D7H008', 'linear', 0, True), ('D7H005-diff-svr', 'linear', 96, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D7H014', [('D7H005', 'linear', 0, True), ('D7H014-diff-svr', 'linear', 96, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D7H002', [('D7H012', 'linear', 0, True), ('D7H002-diff-svr', 'linear', 96, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D8H004', [('D7H014', 'linear', 0, True), ('D8H004-diff-svr', 'linear', 96, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D8H008', [('D8H004', 'linear', 0, True), ('D8H008-diff-svr', 'linear', 96, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D8H003', [('D8H008', 'linear', 0, True), ('D8H003-diff-svr', 'linear', 96, True)], False, [96], 'svr', [1.0], [0.001])
-    # run_svr_permutations('D8H009', [('D8H003', 'linear', 0, True), ('D8H009-diff-svr', 'linear', 96, True)], False, [96], 'svr', [1.0], [0.001])
-
-    # run_gpr_permutations('D3H008', [('D3H012', 'linear', 0, True)], False, [96], 'gpr', [800, 900, 1100, 1200], [0])
-
     # thesis
-    # run_linear_regression_permutations('D3H008', [('D3H012', 'linear', 0, True)], False, [96], 'linreg', 1, 1)
-    produce_diff('D3H008', [('D3H012', 'linear', 0, True)], False, 96, 'linreg', 1, 1, True, True)
+    run_linear_regression_permutations('D3H008', [('D3H012', 'linear', 0, True)], False, [96], 'linreg', 1, 1)
+    # produce_diff('D3H008', [('D3H012', 'linear', 0, True)], False, 96, 'linreg', 1, 1, True, True)
     # run_linear_regression_permutations('D3H008', [('D3H012', 'linear', 0, True)], False, [24, 48, 72, 96, 120, 144, 168, 192, 216, 240, 264, 288, 312, 336, 360, 480], 'linreg', 1, 1)
     # run_linear_regression_permutations('D3H008', [('D3H012', 'linear', 0, True)], False, [24, 48, 72, 96, 120, 144, 168, 192, 216, 240, 264, 288, 312, 336, 360, 480, 600, 720], 'linreg', 1, 1)
     # run_linear_regression_permutations('D3H008', [('D3H012', 'linear', 0, True)], False, [96], 'linreg', 1, 1)

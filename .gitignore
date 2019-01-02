@@ -1,0 +1,6 @@
+Lib/
+Scripts/
+Include/
+model/__pycache__/
+model/results/
+pip-selfcheck.json
